@@ -10,13 +10,13 @@ if(!connectionString){
 
 mongoose.set("bufferCommands", false)
 
-mongoose.connect(connectionString,{
-    serverSelectionTimeoutMS:5000,
-    dbName:"examsys"
-}).then(()=>{
+async function connectDB() {
+    await mongoose.connect(connectionString, {
+        serverSelectionTimeoutMS: 5000,
+        dbName: "examsys"
+    })
     console.log("DB Connected")
-}).catch((error)=>{
-    console.log("Error in connecting DB", error.message)
-})
+}
 
-module.exports = mongoose;
+module.exports = { connectDB, mongoose };
+

@@ -1,4 +1,4 @@
-let mongoose = require("../Database/db")
+let { mongoose } = require("../Database/db")
 
 let question_schema = mongoose.Schema({
     questionText:{

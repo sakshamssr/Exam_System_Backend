@@ -1,4 +1,4 @@
-let mongoose = require("../Database/db")
+let { mongoose } = require("../Database/db")
 
 let login_schema = mongoose.Schema({
     email:{

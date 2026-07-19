@@ -1,4 +1,4 @@
-let mongoose = require("../Database/db")
+let { mongoose } = require("../Database/db")
 
 let signup_schema = mongoose.Schema({
     firstName:{
